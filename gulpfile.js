@@ -1,33 +1,55 @@
-// Require Gulp first!
-const gulp = require("gulp"); //Always needed to define this constant to require gulp
+const gulp = require('gulp'),
+  prettyError = require('gulp-prettyerror'),
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  rename = require('gulp-rename'),
+  cssnano = require('gulp-cssnano'),
+  uglify = require('gulp-uglify'),
+  eslint = require('gulp-eslint');
+
+  //browser-sync --> refresh the browser every time you save
+var browserSync = require('browser-sync').create();
 // This is a very basic Gulp task,
 // with a name and some code to run
 // when this task is called:
-gulp.task("hello", function(done) {
-  console.log("Hello world"); //here what do you want to do
-  done(); // always finish like this, it´s needed.
-});// this was a basic task
+
+//gulp.task("hello", function(done) {
+  //console.log("Hello world"); //here what do you want to do
+  //done(); // always finish like this, it´s needed.
+//});// this was a basic task
 // go to the console to run this task with: gulp default
 // this "default" name is special because is used by the program by default for everyone, in terms that if you just type: gulp, it´ll search and run a "default" task.
-gulp.task("anotherTask", function(done){
-    console.log("running the another task");
-    done();
-});
+//gulp.task("anotherTask", function(done){
+    //console.log("running the another task");
+    //done();
+//});
 ////////////
 
 // Now that we've installed the uglify package we can require it:
-const uglify = require("gulp-uglify"),
-  rename = require("gulp-rename");
-gulp.task("default", function() {
-  return gulp
-    .src("./js/*.js") // What files do we want gulp to consume?
-    .pipe(uglify()) // Call the uglify function on these files
-    .pipe(rename({ extname: ".min.js" })) // Rename the uglified file
-    .pipe(gulp.dest("./build/js")); // Where do we put the result?
+
+ 
+gulp.task('gulp-eslint', () => {
+    return gulp.src(['./js/*.js'])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
 });
 
-//browser-sync --> refresh the browser every time you save
-var browserSync = require('browser-sync').create();
+
+gulp.task("sass", function() {
+  return gulp
+    .src("./sass/style.scss")
+    .pipe(sass())
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
+    .pipe(gulp.dest("./build/css"))
+    .pipe(cssnano())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("./build/css"));
+});
 
 // Static server
 gulp.task("browser-sync", function() {
@@ -41,18 +63,11 @@ gulp.task("browser-sync", function() {
     .on('change', browserSync.reload); 
 });
 
-const eslint = require('gulp-eslint');
- 
-gulp.task('gulp-eslint', () => {
-    return gulp.src(['./js/*.js'])
-        // eslint() attaches the lint output to the "eslint" property
-        // of the file object so it can be used by other modules.
-        .pipe(eslint())
-        // eslint.format() outputs the lint results to the console.
-        // Alternatively use eslint.formatEach() (see Docs).
-        .pipe(eslint.format())
-        // To have the process exit with an error code (1) on
-        // lint error, return the stream and pipe to failAfterError last.
-        .pipe(eslint.failAfterError());
-});
 
+gulp.task("default", function() {
+  return gulp
+    .src("./js/*.js") // What files do we want gulp to consume?
+    .pipe(uglify()) // Call the uglify function on these files
+    .pipe(rename({ extname: ".min.js" })) // Rename the uglified file
+    .pipe(gulp.dest("./build/js")); // Where do we put the result?
+});

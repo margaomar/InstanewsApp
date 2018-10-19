@@ -1,0 +1,108 @@
+@import 'reset';
+@import 'fonts';
+
+
+body{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+}
+nav{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: center;
+    min-height: 470px;
+}
+nav picture{
+    width:100%;
+}
+nav picture img{
+    display: block;
+    margin: 0 auto;
+}
+label{
+    display: block;
+    margin: 20px 0;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+select{
+    background-color: #ffffff;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    /* width: 128px; */
+}
+select:focus {
+    outline: none;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+section{
+    width: 100%;
+    position: relative;
+}
+section a{
+    text-decoration: none;
+    color: #ffffff;
+}
+section h3{
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 2px #111111;
+}
+section img{
+    width: 100%;
+}
+
+
+footer{
+    text-align: center;
+    padding: 40px 30px 50px 30px;
+    color: #c2c2c2;
+}
+
+
+@media screen and (min-width:600px){
+    nav{
+        align-items: center;
+        flex-direction: row;
+        flex-flow: nowrap;
+    }
+    nav picture{
+        width: auto;
+    }
+    nav picture img{
+        display: initial;
+        margin: 0;
+    }
+    label{
+        
+    }
+    section{
+        width: 32.9%;
+        display: inline-block;
+    }
+
+}
+
+@media screen and (min-width:1200px){
+
+    section{
+        width: 25%;
+    }
+}
