@@ -9,35 +9,85 @@
     <!-- <meta name="handheldfriendly" content="true">
     <meta name="mobileoptimized" content="320"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="shortcut icon" href="img/favicon/favicon.png"> -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="./build/css/style.min.css">
 
 	</head>
 	<body>
-    <nav>
-      <picture><img src="images/nyt-logo.svg" /></picture>
-      <select id="select">
-          <option value="dog">Dog</option>
-          <option value="cat">Cat</option>
-          <option value="hamster">Hamster</option>
-          <option value="parrot">Parrot</option>
-          <option value="spider">Spider</option>
-          <option value="goldfish">Goldfish</option>
-      </select>
-    </nav>
+      <header>
+        <nav>
+          <picture><img src="images/nyt-logo.svg" /></picture>
+          <div class="select-box">
+              <label for="select">Choose a section:</label>
+              <select id="select">
+                <option value="">Sections...</option>
+                <option value="Politics">Politics</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+                <option value="parrot">Parrot</option>
+                <option value="spider">Spider</option>
+                <option value="goldfish">Goldfish</option>
+            </select>
+          </div>
+      </nav>
+    </header>
 
     <main class="articles-wrapper">
 
-      <section>
-        <a class="new-link" href="">
-          <img src=""/>
-          <h3 class="abstract"></h3>
+      <!-- <section>
+        <a class="new-link" href="https://www.nytimes.com/2018/10/18/us/politics/saudi-arabia-khashoggi-mnuchin.html">
+          <img src="https://static01.nyt.com/images/2018/10/19/us/politics/19dc-mnuchin/19dc-mnuchin-thumbLarge.jpg"/>
+          <h3 class="abstract">The Treasury secretary has pulled out of the investment conference amid concerns over the disappearance of Jamal Khashoggi, a Saudi journalist.</h3>
         </a>
       </section>
 
+      <section>
+          <a class="new-link" href="https://www.nytimes.com/2018/10/18/us/politics/saudi-arabia-khashoggi-mnuchin.html">
+            <img src="https://static01.nyt.com/images/2018/10/19/us/politics/19dc-mnuchin/19dc-mnuchin-thumbLarge.jpg"/>
+            <h3 class="abstract">The Treasury secretary has pulled out of the investment conference amid concerns over the disappearance of Jamal Khashoggi, a Saudi journalist.</h3>
+          </a>
+        </section>
+
+        <section>
+            <a class="new-link" href="https://www.nytimes.com/2018/10/18/us/politics/saudi-arabia-khashoggi-mnuchin.html">
+              <img src="https://static01.nyt.com/images/2018/10/19/us/politics/19dc-mnuchin/19dc-mnuchin-thumbLarge.jpg"/>
+              <h3 class="abstract">The Treasury secretary has pulled out of the investment conference amid concerns over the disappearance of Jamal Khashoggi, a Saudi journalist.</h3>
+            </a>
+          </section>
+
+          <section>
+              <a class="new-link" href="https://www.nytimes.com/2018/10/18/us/politics/saudi-arabia-khashoggi-mnuchin.html">
+                <img src="https://static01.nyt.com/images/2018/10/19/us/politics/19dc-mnuchin/19dc-mnuchin-thumbLarge.jpg"/>
+                <h3 class="abstract">The Treasury secretary has pulled out of the investment conference amid concerns over the disappearance of Jamal Khashoggi, a Saudi journalist.</h3>
+              </a>
+            </section>
+
+            <section>
+              <a class="new-link" href="https://www.nytimes.com/2018/10/18/us/politics/saudi-arabia-khashoggi-mnuchin.html">
+                <img src="https://static01.nyt.com/images/2018/10/19/us/politics/19dc-mnuchin/19dc-mnuchin-thumbLarge.jpg"/>
+                <h3 class="abstract">The Treasury secretary has pulled out of the investment conference amid concerns over the disappearance of Jamal Khashoggi, a Saudi journalist.</h3>
+              </a>
+            </section>
+
+            <section>
+              <a class="new-link" href="https://www.nytimes.com/2018/10/18/us/politics/saudi-arabia-khashoggi-mnuchin.html">
+                <img src="https://static01.nyt.com/images/2018/10/19/us/politics/19dc-mnuchin/19dc-mnuchin-thumbLarge.jpg"/>
+                <h3 class="abstract">The Treasury secretary has pulled out of the investment conference amid concerns over the disappearance of Jamal Khashoggi, a Saudi journalist.</h3>
+              </a>
+            </section> -->
+
     </main>
+    <footer>
+      <p>© Copyrights 2018 INSTANEWS</p>
+    </footer>
+
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js”></script>  
+    <script src=”./build/js/jquery-3.3.1.min.js”></script>  
+    <script src=”./build/js/custom-script.js”></script>    
+  
+
 
 	</body>
 </html>
