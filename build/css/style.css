@@ -55,38 +55,56 @@ table {
 /* ----- FIN RESET ----- */
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Bold.eot");
-  src: url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
+  src: url("../../fonts/OpenSans-Bold.eot");
+  src: url("../../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-Bold.woff2") format("woff2"), url("../../fonts/OpenSans-Bold.woff") format("woff"), url("../../fonts/OpenSans-Bold.ttf") format("truetype"), url("../../fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Light.eot");
-  src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype"), url("../fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
+  src: url("../../fonts/OpenSans-Light.eot");
+  src: url("../../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-Light.woff2") format("woff2"), url("../../fonts/OpenSans-Light.woff") format("woff"), url("../../fonts/OpenSans-Light.ttf") format("truetype"), url("../../fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSansLight-Italic.eot");
-  src: url("../fonts/OpenSansLight-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansLight-Italic.woff2") format("woff2"), url("../fonts/OpenSansLight-Italic.woff") format("woff"), url("../fonts/OpenSansLight-Italic.ttf") format("truetype"), url("../fonts/OpenSansLight-Italic.svg#OpenSansLight-Italic") format("svg");
+  src: url("../../fonts/OpenSansLight-Italic.eot");
+  src: url("../../fonts/OpenSansLight-Italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSansLight-Italic.woff2") format("woff2"), url("../../fonts/OpenSansLight-Italic.woff") format("woff"), url("../../fonts/OpenSansLight-Italic.ttf") format("truetype"), url("../../fonts/OpenSansLight-Italic.svg#OpenSansLight-Italic") format("svg");
   font-weight: 300;
   font-style: italic; }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-BoldItalic.eot");
-  src: url("../fonts/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("../fonts/OpenSans-BoldItalic.woff") format("woff"), url("../fonts/OpenSans-BoldItalic.ttf") format("truetype"), url("../fonts/OpenSans-BoldItalic.svg#OpenSans-BoldItalic") format("svg");
+  src: url("../../fonts/OpenSans-BoldItalic.eot");
+  src: url("../../fonts/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("../../fonts/OpenSans-BoldItalic.woff") format("woff"), url("../../fonts/OpenSans-BoldItalic.ttf") format("truetype"), url("../../fonts/OpenSans-BoldItalic.svg#OpenSans-BoldItalic") format("svg");
   font-weight: bold;
   font-style: italic; }
+
+body, nav label {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal; }
+
+@-webkit-keyframes fadein-text {
+  0% {
+    -webkit-transform: translateY(-10);
+            transform: translateY(-10); }
+  100% {
+    -webkit-transform: translateY(10);
+            transform: translateY(10); } }
+
+@keyframes fadein-text {
+  0% {
+    -webkit-transform: translateY(-10);
+            transform: translateY(-10); }
+  100% {
+    -webkit-transform: translateY(10);
+            transform: translateY(10); } }
 
 body {
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Open Sans';
-  font-weight: 300;
-  font-style: normal;
   font-size: 14px; }
 
 nav {
@@ -106,84 +124,121 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 470px; }
+  nav.open {
+    min-height: auto;
+    margin: 3rem 0; }
+    nav.open img {
+      width: 8rem; }
+  @media (min-width: 600px) {
+    nav {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      nav.open {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        margin: 30px 0; }
+        nav.open div {
+          margin-left: 300px; }
+        nav.open picture {
+          margin-right: -200px; }
+          nav.open picture img {
+            width: 100px; } }
+  @media (min-width: 1200px) {
+    nav {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: end;
+      min-height: 78vh; }
+      nav.open {
+        min-height: auto; } }
+  nav picture {
+    width: 100%; }
+    @media (min-width: 600px) {
+      nav picture {
+        width: auto; } }
+    @media (min-width: 1200px) {
+      nav picture {
+        margin-right: 0 50px; } }
+    nav picture img {
+      display: block;
+      margin: 0 auto; }
+      @media (min-width: 600px) {
+        nav picture img {
+          display: initial;
+          margin: 0; } }
+  nav label {
+    display: block;
+    margin: 20px 0;
+    text-align: center; }
+  nav select {
+    background-color: #ffffff;
+    margin: 0 auto;
+    display: block;
+    width: 100%; }
+    nav select:focus {
+      outline: none; }
 
-nav picture {
-  width: 100%; }
-
-nav picture img {
+.loader {
   display: block;
-  margin: 0 auto; }
-
-label {
-  display: block;
-  margin: 20px 0;
-  font-family: 'Open Sans';
-  font-weight: 300;
-  font-style: normal;
-  text-align: center; }
-
-select {
-  background-color: #ffffff;
   margin: 0 auto;
-  display: block;
-  width: 100%;
-  /* width: 128px; */ }
-
-select:focus {
-  outline: none; }
+  width: 150px;
+  height: 150px; }
 
 main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-
-section {
-  width: 100%;
-  position: relative; }
-
-section a {
-  text-decoration: none;
-  color: #ffffff; }
-
-section h3 {
-  position: absolute;
-  bottom: 0;
-  padding: 5px;
-  font-size: 12px;
-  line-height: 1.2rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  text-shadow: 1px 1px 2px #111111; }
-
-section img {
-  width: 100%; }
+      flex-wrap: wrap;
+  overflow: hidden; }
+  @media (min-width: 600px) {
+    main {
+      margin-right: -10px; } }
+  main section {
+    width: 100%;
+    height: 350px;
+    min-height: 200px;
+    overflow: hidden;
+    position: relative; }
+    @media (min-width: 600px) {
+      main section {
+        width: 32.9%;
+        height: 350px; } }
+    @media (min-width: 1200px) {
+      main section {
+        width: 25%; } }
+    main section a {
+      text-decoration: none;
+      color: #ffffff; }
+    main section h3 {
+      position: absolute;
+      bottom: -100px;
+      padding: 3%;
+      width: 94%;
+      font-size: 12px;
+      line-height: 1.2rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-shadow: 1px 1px 2px #111111;
+      opacity: 0;
+      -webkit-transition: 1s;
+      transition: 1s; }
+    main section:hover h3 {
+      opacity: 1;
+      bottom: 0; }
+    main section img {
+      height: 100%; }
+      @media (min-width: 600px) {
+        main section img {
+          width: auto;
+          height: 100%; } }
 
 footer {
   text-align: center;
   padding: 40px 30px 50px 30px;
   color: #c2c2c2; }
-
-@media screen and (min-width: 600px) {
-  nav {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-flow: nowrap;
-        flex-flow: nowrap; }
-  nav picture {
-    width: auto; }
-  nav picture img {
-    display: initial;
-    margin: 0; }
-  section {
-    width: 32.9%;
-    display: inline-block; } }
-
-@media screen and (min-width: 1200px) {
-  section {
-    width: 25%; } }
+  @media (min-width: 1200px) {
+    footer {
+      text-align: left;
+      margin-left: 30px; } }
