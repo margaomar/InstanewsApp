@@ -1,52 +1,14 @@
 @import 'reset';
 @import 'fonts';
-
-
-//@mixins--@queries
-$tablet-width: 600px;
-@mixin tablet {
-  @media (min-width: $tablet-width) {
-    @content;
-  }
-}
-
-$desktop-width: 1200px;
-@mixin desktop {
-  @media (min-width: $desktop-width) {
-    @content;
-  }
-}
-//@extends
-%font-base{
-    font-family: 'Open Sans';
-    font-weight: 300;
-    font-style: normal;
-}
-$main-transition: all 2s ease;
-
-//@keyframes
-@keyframes fadein-text{
-    0%{
-        transform: translateY(-10);
-    }
-    100%{
-        transform:translateY(10);
-    }
-}
-@keyframes logo-open{
-    0%{
-        margin: 0 auto;
-    }
-    100%{
-        margin: 3rem 0;
-    }
-}
+@import 'mixins';
+@import 'variables';
+@import 'animations';
 
 body{
-    background-color: #000000;    
-    color: #ffffff;
+    background-color: $black-main;    
+    color: $white-main;
     @extend %font-base;
-    font-size: 14px;
+    $font-size: $font-size-base;
 }
 nav{
     display: flex;
@@ -115,7 +77,7 @@ nav{
         text-align: center;
     }
     select{
-        background-color: #ffffff;
+        background-color: $white-main;
         margin: 0 auto;
         display: block;
         width: 100%;
@@ -129,8 +91,8 @@ nav{
 .loader{
     display: block;
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
 }
 
 main{
@@ -154,7 +116,7 @@ main{
 
         a{
             text-decoration: none;
-            color: #ffffff;
+            color: $white-main;
             .section-img {
                 background-size: cover;
                 width: 100%;
@@ -166,10 +128,10 @@ main{
             bottom: 0;
             padding: 3%;
             width: 94%;
-            font-size: 12px;
-            line-height: 1.2rem;
+            font-size: $font-size-base - 1px;
+            line-height: 1.4rem;
             background-color: rgba(0, 0, 0, 0.7);
-            text-shadow: 1px 1px 2px #111111;
+            text-shadow: $shadow-text;
             opacity: 1;
             transition: 1s;
             @include desktop{
@@ -187,7 +149,7 @@ main{
 footer{
     text-align: center;
     padding: 40px 30px 50px 30px;
-    color: #c2c2c2;
+    color: $grey-light;
     @include desktop{
         text-align: left;
         margin-left: 30px;

@@ -1,0 +1,14 @@
+//@mixins--@queries
+$tablet-width: 600px;
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+$desktop-width: 1200px;
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
