@@ -15,27 +15,28 @@ $( document ).ready(function(){
   }); //define url for the json api
 
     $.ajax({
-      url,
+      url: url,
       method: 'GET',
     }).done(function(data) { 
       var news = '';
-      let i = 0;
-      let articleAdded = 0; //define each single article
-
+      var i = 0;
+      var articleAdded = 0; //define each single article
+      $articles.empty();
       for(i = 0; i < data.results.length && articleAdded < 12; i++){ //in case there's not image in one of the results => be sure to show 12 articles in total
-        let currentResult = data.results[i]; //my results into a vble
+        var currentResult = data.results[i]; //my results into a vble
         if (currentResult.multimedia.length !== 0){ 
+          news = '';
           articleAdded++; 
-          let $articleSection = data.results[i].section;
-          let $articleUrl = data.results[i].url;
-          let $imageUrl = data.results[i].multimedia[4].url;
-          let $articleAbstract = data.results[i].abstract;
+          var $articleSection = data.results[i].section;
+          var $articleUrl = data.results[i].url;
+          var $imageUrl = data.results[i].multimedia[4].url;
+          var $articleAbstract = data.results[i].abstract;
 
-          news += '<section> <a class="new-link" href="' + $articleUrl + '" target="_blank">'; 
-          news += '<img src="' + $imageUrl + '" />'
-          news += '<h3>' + $articleAbstract + '</h3></a></section>'; 
-          
-          $articles.empty().append(news);
+           news += '<section> <a class="new-link" href="' + $articleUrl + '" target="_blank">'; 
+           news += '<div class="section-img" style="background-image:url('+ $imageUrl +')"> '
+           news += '<h3>' + $articleAbstract + '</h3></div></a></section>'; 
+
+          $articles.append(news);
         } 
       } 
     });
