@@ -45,12 +45,12 @@ HTML5 | CSS3 | Gulp | Sass (CSS Preprocessors) | JQuery | AJAX | API's | CSS ani
 **Mobile Device**
 ----
 <img src="screenshoots/movile-closed-320px.png" height="2100px">
-<img src="screenshoots/movile-open-320px.png" height="2100px">
+<img src="screenshoots/movile-open-320px.jpg" height="2100px">
 
 **Tablet Device**
 ----
 <img src="screenshoots/tablet-closed-600px.png" height="2100px">
-<img src="screenshoots/tablet-open-600px.png" height="2100px">
+<img src="screenshoots/tablet-open-600px.jpg" height="2100px">
 
 
 **Desktop Device**
