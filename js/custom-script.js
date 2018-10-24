@@ -7,7 +7,7 @@ $( document ).ready(function(){
     //change the nav position
     $("nav").addClass("open", 10000);
     //spining loader
-    $("#articles-wrapper").append('<img id="loader-img" alt="" src="images/ajax-loader.gif" class="loader" />');
+    $articles.append('<img id="loader-img" alt="" src="images/ajax-loader.gif" class="loader" />');
 
     var selected = $(this).val(); //define your choise on select
     var url = "https://api.nytimes.com/svc/topstories/v2/" + selected + ".json?" + $.param({

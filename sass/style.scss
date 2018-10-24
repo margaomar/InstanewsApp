@@ -22,6 +22,8 @@ $desktop-width: 1200px;
     font-weight: 300;
     font-style: normal;
 }
+$main-transition: all 1s ease;
+
 //@keyframes
 @keyframes fadein-text{
     0%{
@@ -31,14 +33,14 @@ $desktop-width: 1200px;
         transform:translateY(10);
     }
 }
-// @keyframes logo-open{
-//     0%{
-//         margin: 0 auto;
-//     }
-//     100%{
-//         margin: 3rem 0;
-//     }
-// }
+@keyframes logo-open{
+    0%{
+        margin: 0 auto;
+    }
+    100%{
+        margin: 3rem 0;
+    }
+}
 
 body{
     background-color: #000000;    
@@ -47,37 +49,50 @@ body{
     font-size: 14px;
 }
 nav{
-    margin: 0 auto;
+    // margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex-flow: wrap;
     align-content: center;
     justify-content: center;
-    min-height: 470px;
-    // transition: logo-open 3s;
-    // transition: all 3s;
+    height: 80vh;
+    // flex: 0 1 auto;
+    // transition: logo-open 3s linear;
+    transition: $main-transition;
     &.open{
-        min-height: auto;
-        margin: 3rem 0;
-        img{
-            width: 8rem;
+        height: 50vh;
+        picture{
+                // width: 100%;
+            img{
+                height: 24vh;
+            }
         }
     }
     @include tablet{
         align-items: center;
         // flex-direction: row;
         // flex-flow: nowrap;
-        
         &.open{
-            align-items: flex-start;
-            margin: 30px 0;
-            div{
-                margin-left: 300px;
+            // align-items: flex-start;
+            height: 35vh;
+            .select-box{
+                // margin-left: 300px;
+                // margin-top: 3%;
+                // width: 20%;
+            }
+            label{
+                margin: 0 0 20px 0;
             }
             picture{
-                margin-right: -200px;
+                // margin-right: -200px;
+                // width: 50vw;
+                width: 28%;
+                // @include desktop{
+                //     width: 16vw;
+                // }
                 img{
-                    width: 100px;
+                    // width: 100px;
+                    height: 20vh;
                 }
             }
         }
@@ -85,23 +100,30 @@ nav{
     @include desktop{
         justify-content: end;
         min-height: 78vh;
+        padding-left: 3%;
         &.open{
             min-height: auto;
+            picture{
+                width: 16vw;
+            }
         }
     }
     picture{
-        width:100%;
-        // transition: all 3s;
+        width: 100%;
+        transition: $main-transition;
+        // transition: logo-open 3s linear;
         @include tablet{
             width: auto;
         }
         @include desktop{
-            margin-right: 0 50px;
+            // margin: 0 50px;
         }
             
         img{
             display: block;
             margin: 0 auto;
+            transition: $main-transition;
+            // transition: logo-open 3s linear;
             @include tablet{
                 display: initial;
                 margin: 0;
@@ -153,8 +175,8 @@ main{
         position: relative;
         
         @include tablet{
-            width: 32.9%;
-            height:350px;
+            width: 33.33%;
+            // height:350px;
         }
         @include desktop{
             width: 25%;
@@ -166,26 +188,34 @@ main{
         }
         h3{
             position: absolute;
-            bottom: -100px;
+            // bottom: -100px;
+            bottom: 0;
             padding: 3%;
             width: 94%;
             font-size: 12px;
             line-height: 1.2rem;
             background-color: rgba(0, 0, 0, 0.7);
             text-shadow: 1px 1px 2px #111111;
-            opacity:0;
+            // opacity:0;
+            opacity: 1;
             transition: 1s;
             // animation: fadein-text .3s; 
+            @include desktop{
+                bottom: -100px;
+                opacity: 0;
+            }
         }
         &:hover h3{
             opacity: 1;
             bottom: 0;
         }
         img{
-            height: 100%;
+            // height: 100%;
+            height: 80vh;
+            
             @include tablet{
                 width: auto;
-                height: 100%;
+                // height: 74vh;
                 // position: absolute;
                 // left: -50%;
             }
