@@ -56,7 +56,7 @@ HTML5 | CSS3 | Gulp | Sass (CSS Preprocessors) | JQuery | AJAX | API's | CSS ani
 **Desktop Device**
 ----
 <img src="screenshoots/desktop-closed-1200px.png" width="1200px" />
-<img src="screenshoots/desktop-closed-1200px.png" width="1200px" />
+<img src="screenshoots/desktop-open-1200px.png" width="1200px" />
 
 
 ----
