@@ -44,19 +44,19 @@ HTML5 | CSS3 | Gulp | Sass (CSS Preprocessors) | JQuery | AJAX | API's | CSS ani
 
 **Mobile Device**
 ----
-<img src="screenshoots/movile-closed-320px.png" height="2100px">
-<img src="screenshoots/movile-open-320px.jpg" height="2100px">
+<img src="screenshoots/movile-closed-320px.png" width="320px" />
+<img src="screenshoots/movile-open-320px.jpg" width="320px" />
 
 **Tablet Device**
 ----
-<img src="screenshoots/tablet-closed-600px.png" height="2100px">
-<img src="screenshoots/tablet-open-600px.jpg" height="2100px">
+<img src="screenshoots/tablet-closed-600px.png" width="600px" />
+<img src="screenshoots/tablet-open-600px.jpg" width="600px" />
 
 
 **Desktop Device**
 ----
-<img src="screenshoots/desktop-closed-1200px.png" height="2100px">
-<img src="screenshoots/desktop-closed-1200px.png" height="2100px">
+<img src="screenshoots/desktop-closed-1200px.png" width="1200px" />
+<img src="screenshoots/desktop-closed-1200px.png" width="1200px" />
 
 
 ----
