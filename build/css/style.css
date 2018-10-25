@@ -102,18 +102,6 @@ body, nav label {
     -webkit-transform: translateY(10px);
             transform: translateY(10px); } }
 
-@-webkit-keyframes logo-open {
-  0% {
-    margin: 0 auto; }
-  100% {
-    margin: 3rem 0; } }
-
-@keyframes logo-open {
-  0% {
-    margin: 0 auto; }
-  100% {
-    margin: 3rem 0; } }
-
 body {
   background-color: #000000;
   color: #ffffff; }
@@ -134,8 +122,8 @@ nav {
       -ms-flex-pack: center;
           justify-content: center;
   height: 80vh;
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease; }
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease; }
   nav.open {
     height: 50vh; }
     nav.open img {
@@ -146,13 +134,13 @@ nav {
           -ms-flex-align: center;
               align-items: center; }
       nav.open {
-        height: 35vh; }
-        nav.open label {
-          margin: 0 0 20px 0; }
-        nav.open picture {
-          width: 28%; }
-          nav.open picture img {
-            height: 20vh; } }
+        height: 22vh; }
+        nav.open .select-box {
+          margin-left: 10%; }
+          nav.open .select-box label {
+            margin: 0 0 20px 0; }
+        nav.open img {
+          height: 15vh; } }
   @media (min-width: 1200px) {
     nav {
       -webkit-box-pack: end;
@@ -162,20 +150,20 @@ nav {
       padding-left: 3%; }
       nav.open {
         min-height: auto; }
-        nav.open picture {
-          width: 16vw; } }
+        nav.open .select-box {
+          margin-left: 6%; } }
   nav picture {
     width: 100%;
-    -webkit-transition: all 2s ease;
-    transition: all 2s ease; }
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease; }
     @media (min-width: 600px) {
       nav picture {
         width: auto; } }
     nav picture img {
       display: block;
       margin: 0 auto;
-      -webkit-transition: all 2s ease;
-      transition: all 2s ease; }
+      -webkit-transition: all 3s ease;
+      transition: all 3s ease; }
       @media (min-width: 600px) {
         nav picture img {
           display: initial;
@@ -186,9 +174,8 @@ nav {
     text-align: center; }
   nav select {
     background-color: #ffffff;
-    margin: 0 auto;
     display: block;
-    width: 100%; }
+    width: 90%; }
     nav select:focus {
       outline: none; }
 

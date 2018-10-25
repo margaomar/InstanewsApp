@@ -4,8 +4,10 @@ $( document ).ready(function(){
   var selected = $("#select option:checked").val();
 
   $( "#select" ).on('change', function() {
-    //change the nav position
+    //change the nav position adding a class in css
     $("nav").addClass("open", 10000);
+
+    // $("picture").animate({width: "18vw" margin-left: "26vw"},1000,function() {alert ('Efecto terminado!');});
     //spining loader
     $articles.append('<img id="loader-img" alt="Images on load" src="images/ajax-loader.gif" class="loader" />');
 
