@@ -12,8 +12,8 @@ $( document ).ready(function(){
     $articles.append('<img id="loader-img" alt="Images on load" src="images/ajax-loader.gif" class="loader" />');
 
     var selected = $(this).val(); //define your choise on select
-    var url = "https://api.nytimes.com/svc/topstories/v2/" + selected + ".json?" +$.param({
-    'api-key': "82f12f3e4189492f86578cb2d4e6add0"
+    var url = "https://api.nytimes.com/svc/topstories/v2/" + selected + ".json?" + $.param({
+    'api-key': "0751ffff01d7a70710354972fa0ad4a9"
   }); //define url for the json api
 
     $.ajax({
